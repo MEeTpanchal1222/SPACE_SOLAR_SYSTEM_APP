@@ -1,0 +1,58 @@
+[
+{
+"planet": "Mercury",
+"description": "Mercury is the closest planet to the Sun and has a very thin atmosphere.",
+"numberImage": "assets/numbers/img1.png",
+"planetImage": "assets/planets/mercury.png",
+"color": "#F5B971"
+},
+{
+"planet": "Venus",
+"description": "Venus has a thick atmosphere and is the hottest planet in our solar system.",
+"numberImage": "assets/numbers/img2.png",
+"planetImage": "assets/planets/venus.png",
+"color": "#F5A623"
+},
+{
+"planet": "Earth",
+"description": "Earth is the third planet from the Sun and the only one known to support life.",
+"numberImage": "assets/numbers/img3.png",
+"planetImage": "assets/planets/earth.png",
+"color": "#50E3C2"
+},
+{
+"planet": "Mars",
+"description": "Mars is known as the Red Planet and has the largest volcano in the solar system.",
+"numberImage": "assets/numbers/img4.png",
+"planetImage": "assets/planets/mars.png",
+"color": "#F86B67"
+},
+{
+"planet": "Jupiter",
+"description": "Jupiter is the largest planet in the solar system and has a Great Red Spot.",
+"numberImage": "assets/numbers/img5.png",
+"planetImage": "assets/planets/jupiter.png",
+"color": "#F8B867"
+},
+{
+"planet": "Saturn",
+"description": "Saturn is famous for its beautiful rings made of ice and rock.",
+"numberImage": "assets/numbers/img6.png",
+"planetImage": "assets/planets/saturn.png",
+"color": "#E3C567"
+},
+{
+"planet": "Uranus",
+"description": "Uranus is a gas giant with a unique sideways rotation.",
+"numberImage": "assets/numbers/img7.png",
+"planetImage": "assets/planets/uranus.png",
+"color": "#95E0E8"
+},
+{
+"planet": "Neptune",
+"description": "Neptune is known for its strong winds and is the farthest planet from the Sun.",
+"numberImage": "assets/numbers/img8.png",
+"planetImage": "assets/planets/neptune.png",
+"color": "#4A90E2"
+}
+]
