@@ -35,6 +35,7 @@ class JsonDetailProvider  extends ChangeNotifier {
   JsonDetailProvider() {
     print('--------------------- data called ----------------');
     jsonParsing();
+    _loadBookmarkedPlanets();
     print('--------------------- Done ----------------');
   }
 
@@ -72,6 +73,7 @@ class JsonDetailProvider  extends ChangeNotifier {
     } else {
       bookmarkedList.add(planet);
     }
+    _loadBookmarkedPlanets();
     _saveBookmarkedPlanets();
     notifyListeners();
   }

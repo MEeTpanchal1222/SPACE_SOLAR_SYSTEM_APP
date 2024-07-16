@@ -23,14 +23,14 @@ class SolarSystemApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Solar System App',
-      //initialRoute: "/home",
-      home : HomeScreen(),
-      // routes: {
-      //   "/" : (context)=> slshscreen(),
-      //   "/home" : (context)=> HomeScreen(),
-      //   "/detail" : (context)=> Detailscreen(index: 0,),
-      //   "/bookmark":(context)=> BookmarkScreen(),
-      // },
+      initialRoute: "/",
+      //home : HomeScreen(),
+      routes: {
+        "/" : (context)=> slshscreen(),
+        "/home" : (context)=> HomeScreen(),
+        "/detail" : (context)=> Detailscreen(index: 0,),
+        "/bookmark":(context)=> BookmarkScreen(),
+      },
     );
   }
 }

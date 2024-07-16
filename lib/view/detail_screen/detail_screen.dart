@@ -63,12 +63,21 @@ class _DetailscreenState extends State<Detailscreen> with SingleTickerProviderSt
                 SizedBox(height: 200),
                 Image.asset(
                   jsonCardProvider.userList[widget.index].numberImage,
-                  height: 250,
+                  height: 300,
                   fit: BoxFit.cover,
-                ),// Add space to place the planet image correctly
-                Text(
-                  jsonDetailProvider.userList[widget.index].name,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 8,),
+                Row(
+                  children: [
+                    Text(
+                      jsonDetailProvider.userList[widget.index].name,
+                      style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(width: 200,),
+                    IconButton(onPressed: () {
+                      jsonDetailProvider.bookmarkedList.add(jsonDetailProvider.userList[widget.index]);
+                    }, icon: Icon(Icons.book),)
+                  ],
                 ),
                 SizedBox(height: 8),
                 Text(

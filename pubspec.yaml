@@ -71,6 +71,7 @@ flutter:
     - assets/numbers/
     - assets/json/home_screen_planet_list/list.json
     - assets/json/planet_list/planet_list.json
+    - assets/logo/logo.png
 
 
 
