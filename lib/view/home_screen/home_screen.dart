@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../controller/provider.dart';
+import '../../modal/home_card_modal/page_ transitions.dart';
+import '../bookmark/bookmark.dart';
+import '../detail_screen/detail_screen.dart';
 import 'componets/card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
 
      JsoncardProvider jsonCardProvider = Provider.of<JsoncardProvider>(context,listen: false);
+     JsonDetailProvider detailProvider = Provider.of<JsonDetailProvider>(context,listen: false);
     return Scaffold(
       backgroundColor: Colors.deepPurple.shade200,
       bottomNavigationBar: Padding(
@@ -34,15 +38,25 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 GestureDetector(
                   onTap: () {
-
+                    Navigator.of(context).push(createRoute(HomeScreen()),);
                   },
                     child: ImageIcon(AssetImage("assets/icons/home.png"), color: Colors.yellow,size: 40,)),
                 GestureDetector(
-                  onTap: () {
+                    onTap: () {
+                      setState(() {
+                        Navigator.of(context).push(createRoute(Detailscreen(index: 2)),);
+                      });
 
                   },
                     child: ImageIcon(AssetImage("assets/icons/discovery.png"), color: Colors.yellow,size: 40,)),
-                ImageIcon(AssetImage("assets/icons/like.png"), color: Colors.yellow,size: 40,),
+                GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        Navigator.of(context).push(createRoute(BookmarkScreen()),);
+                      });
+
+                    },
+                    child: ImageIcon(AssetImage("assets/icons/like.png"), color: Colors.yellow,size: 40,)),
                 ImageIcon(AssetImage("assets/icons/acount.png"), color: Colors.yellow,size: 40,),
               ],
             ),
@@ -71,11 +85,11 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: 500,
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-              itemCount: 8,
+              itemCount: jsonCardProvider.userList.length,
                 itemBuilder: (context, index) {
                   return PlanetCard(planetCardModal: jsonCardProvider.userList[index]);
                 },

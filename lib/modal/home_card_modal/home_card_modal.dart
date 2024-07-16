@@ -4,6 +4,7 @@ class Planetcardmodal {
   final String numberImage;
   final String description;
   final String color;
+  final String position;
 
   Planetcardmodal({
     required this.planet,
@@ -11,10 +12,12 @@ class Planetcardmodal {
     required this.numberImage,
     required this.description,
     required this.color,
+    required this.position
   });
 
   factory Planetcardmodal.fromJson(Map<String, dynamic> json) {
     return Planetcardmodal(
+      position: json['position'],
       planet: json['planet'],
       planetImage: json['planetImage'],
       numberImage: json['numberImage'],
