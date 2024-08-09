@@ -17,8 +17,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-
-     JsoncardProvider jsonCardProvider = Provider.of<JsoncardProvider>(context,listen: false);
      JsonDetailProvider detailProvider = Provider.of<JsonDetailProvider>(context,listen: false);
     return Scaffold(
       backgroundColor: Colors.deepPurple.shade200,
@@ -89,9 +87,9 @@ class _HomeScreenState extends State<HomeScreen> {
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-              itemCount: jsonCardProvider.userList.length,
+              itemCount: detailProvider.userList.length,
                 itemBuilder: (context, index) {
-                  return PlanetCard(planetCardModal: jsonCardProvider.userList[index]);
+                  return PlanetCard(planetCardModal: detailProvider.userList[index]);
                 },
               ),
             )

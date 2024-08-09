@@ -15,7 +15,6 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
   @override
   Widget build(BuildContext context) {
     JsonDetailProvider provider = Provider.of<JsonDetailProvider>(context, listen: true);
-    JsoncardProvider provideri = Provider.of<JsoncardProvider>(context, listen: true);
 
     return Scaffold(
       appBar: AppBar(
@@ -34,36 +33,27 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
         itemCount: provider.bookmarkedList.length,
         itemBuilder: (context, index) {
           final planet = provider.bookmarkedList[index];
-          final planeti = provideri.userList[int.parse(planet.position)-1];
           return  Card(
               color: Colors.white,
-              child: InkWell(
-                onTap: () {
-
-              Navigator.of(context).push(createRoute(Detailscreen(index: int.parse(planet.position)-1)));
-             // MaterialPageRoute(builder: (context)=>
-                 // Detailscreen(index: int.parse(planet.position)-1));
-                },
-                child: ListTile(
-                  leading: Image.asset(planeti.planetImage),
-                  title: Text(
-                    planet.name,
-                    style: TextStyle(color: Color(int.parse("0xFF${planeti.color.substring(1)}")),),
-                  ),
-                  subtitle: Text(
-                    planeti.description,
-                    style: TextStyle(color: Colors.grey),
-                  ),
-                  trailing: IconButton(
-                    icon: Icon(Icons.delete, color: Color(int.parse("0xFF${planeti.color.substring(1)}")),),
-                    onPressed: () {
-                      provider.toggleBookmark(planet);
-                    },
-                  ),
-                  onTap: () {
-
+              child: ListTile(
+                leading: Image.asset(planet.planetImage),
+                title: Text(
+                  planet.name,
+                  style: TextStyle(color: Color(int.parse("0xFF${planet.color.substring(1)}")),),
+                ),
+                subtitle: Text(
+                  planet.description,
+                  style: TextStyle(color: Colors.grey),
+                ),
+                trailing: IconButton(
+                  icon: Icon(Icons.delete, color: Color(int.parse("0xFF${planet.color.substring(1)}")),),
+                  onPressed: () {
+                    provider.toggleBookmark(planet);
                   },
                 ),
+                onTap: () {
+
+                },
               ),
           );
         },

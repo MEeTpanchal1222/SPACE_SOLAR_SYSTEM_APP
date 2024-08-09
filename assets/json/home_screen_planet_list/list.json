@@ -1,66 +1,143 @@
 [
-{
-  "position": "1",
-"planet": "Mercury",
-"description": "Mercury is the closest planet to the Sun and has a very thin atmosphere.",
-"numberImage": "assets/numbers/img1.png",
-"planetImage": "assets/planets/mercury.png",
-"color": "#F5B971"
-},
-{
-  "position": "2",
-"planet": "Venus",
-"description": "Venus has a thick atmosphere and is the hottest planet in our solar system.",
-"numberImage": "assets/numbers/img2.png",
-"planetImage": "assets/planets/venus.png",
-"color": "#F5A623"
-},
-{
-  "position": "3",
-"planet": "Earth",
-"description": "Earth is the third planet from the Sun and the only one known to support life.",
-"numberImage": "assets/numbers/img3.png",
-"planetImage": "assets/planets/earth.png",
-"color": "#50E3C2"
-},
-{
-  "position": "4",
-"planet": "Mars",
-"description": "Mars is known as the Red Planet and has the largest volcano in the solar system.",
-"numberImage": "assets/numbers/img4.png",
-"planetImage": "assets/planets/mars.png",
-"color": "#F86B67"
-},
-{
-  "position": "5",
-"planet": "Jupiter",
-"description": "Jupiter is the largest planet in the solar system and has a Great Red Spot.",
-"numberImage": "assets/numbers/img5.png",
-"planetImage": "assets/planets/jupiter.png",
-"color": "#F8B867"
-},
-{
-  "position": "6",
-"planet": "Saturn",
-"description": "Saturn is famous for its beautiful rings made of ice and rock.",
-"numberImage": "assets/numbers/img6.png",
-"planetImage": "assets/planets/saturn.png",
-"color": "#E3C567"
-},
-{
-  "position": "7",
-"planet": "Uranus",
-"description": "Uranus is a gas giant with a unique sideways rotation.",
-"numberImage": "assets/numbers/img7.png",
-"planetImage": "assets/planets/uranus.png",
-"color": "#95E0E8"
-},
-{
-  "position": "8",
-"planet": "Neptune",
-"description": "Neptune is known for its strong winds and is the farthest planet from the Sun.",
-"numberImage": "assets/numbers/img8.png",
-"planetImage": "assets/planets/neptune.png",
-"color": "#4A90E2"
-}
+  {
+    "position": "1",
+    "planet": "Mercury",
+    "description": "Mercury is the closest planet to the Sun and due to its proximity it is not easily seen except during twilight. For every two orbits of the Sun, Mercury completes three rotations about its axis and up until 1965 it was thought that the same side of Mercury constantly faced the Sun. Thirteen times a century Mercury can be observed from the Earth passing across the face of the Sun in an event called a transit, the next will occur on the 9th May 2016.",
+    "numberImage": "assets/numbers/img1.png",
+    "planetImage": "assets/planets/mercury.png",
+    "color": "#F5B971",
+    "velocity": "47",
+    "distance": "58",
+    "images": [
+      "http://space-facts.com/wp-content/uploads/mercury-transparent.png",
+      "https://cdn.mos.cms.futurecdn.net/fjbeeRiPRQjQNhizwy7cWX-1200-80.jpg",
+      "https://www.universetoday.com/wp-content/uploads/2012/03/mercury_earth.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZckcnwAugmUVGw0M8Ua4BnEde0mbqNVagg&s",
+      "https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-this-image-of-the-moon-with-the-dark-colored-spots-image_2929294.jpg"
+    ]
+  },
+  {
+    "position": "2",
+    "planet": "Venus",
+    "description": "Venus is the second planet from the Sun and is the second brightest object in the night sky after the Moon. Named after the Roman goddess of love and beauty, Venus is the second largest terrestrial planet and is sometimes referred to as the Earth’s sister planet due the their similar size and mass. The surface of the planet is obscured by an opaque layer of clouds made up of sulphuric acid.",
+    "numberImage": "assets/numbers/img2.png",
+    "planetImage": "assets/planets/venus.png",
+    "color": "#F5A623",
+    "velocity": "35",
+    "distance": "108",
+    "images": [
+      "http://space-facts.com/wp-content/uploads/venus-transparent.png",
+      "https://images.newscientist.com/wp-content/uploads/2021/04/29112534/2amj054_web.jpg?crop=1:1,smart&width=1200&height=1200&upscale=true",
+      "https://c02.purpledshub.com/uploads/sites/48/2023/12/venus-atmosphere.jpg",
+      "https://science.nasa.gov/wp-content/uploads/2016/05/venus2-jpg.webp?w=4096&format=png&crop=1",
+      "https://earthhow.com/wp-content/uploads/2018/08/Venus-850x850.jpg"
+    ]
+  },
+  {
+    "position": "3",
+    "planet": "Earth",
+    "description": "Earth is the third planet from the Sun and is the largest of the terrestrial planets. The Earth is the only planet in our solar system not to be named after a Greek or Roman deity. The Earth was formed approximately 4.54 billion years ago and is the only known planet to support life.",
+    "numberImage": "assets/numbers/img3.png",
+    "planetImage": "assets/planets/earth.png",
+    "color": "#50E3C2",
+    "velocity": "29",
+    "distance": "149",
+    "images": [
+      "http://space-facts.com/wp-content/uploads/earth-transparent.png",
+      "https://upload.wikimedia.org/wikipedia/commons/c/cb/The_Blue_Marble_%28remastered%29.jpg",
+      "https://www-cdn.eumetsat.int/files/2022-03/earth-space.jpg",
+      "https://api.hub.jhu.edu/factory/sites/default/files/styles/soft_crop_1300/public/earth-core.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsRtkc3Q7ZzFb_IrmEh-VzAlTrb6BxBzZGFg&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCZCuD4ge6wbyjLKxz8r-VUclv4JLz0sDiYQ&s"
+    ]
+  },
+  {
+    "position": "4",
+    "planet": "Mars",
+    "description": "Mars is the fourth planet from the Sun and is the second smallest planet in the solar system. Named after the Roman god of war, Mars is also often described as the “Red Planet” due to its reddish appearance. Mars is a terrestrial planet with a thin atmosphere composed primarily of carbon dioxide.",
+    "numberImage": "assets/numbers/img4.png",
+    "planetImage": "assets/planets/mars.png",
+    "color": "#F86B67",
+    "velocity": "24",
+    "distance": "227",
+    "images": [
+      "http://space-facts.com/wp-content/uploads/mars-transparent.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo0sfBghhyvJ0mC6ONbnM7wi1o_H484LZ9PA&s",
+      "https://cdn.mos.cms.futurecdn.net/EjjVxJ8DCca2MVc8qBGtXK.jpg",
+      "https://i.natgeofe.com/n/35c9b22c-029d-4c31-b567-3223d71ddd20/1075.jpg",
+      "https://cdn.britannica.com/24/73524-050-3C2F3432/result-seasons-Mars-planet-inclination-plane-cap.jpg",
+      "https://helios-i.mashable.com/imagery/articles/00P2lrrPu1TxUVDypHzETMU/hero-image.fill.size_1200x675.v1689871376.jpg"
+    ]
+  },
+  {
+    "position": "5",
+    "planet": "Jupiter",
+    "description": "The planet Jupiter is the fifth planet out from the Sun, and is two and a half times more massive than all the other planets in the solar system combined. It is made primarily of gases and is therefore known as a “gas giant”.",
+    "numberImage": "assets/numbers/img5.png",
+    "planetImage": "assets/planets/jupiter.png",
+    "color": "#F8B867",
+    "velocity": "13",
+    "distance": "778",
+    "images": [
+      "http://space-facts.com/wp-content/uploads/jupiter-transparent.png",
+      "https://i.insider.com/609aa91a342837001822cbd6?width=800&format=jpeg&auto=webp",
+      "https://static.toiimg.com/thumb/msid-106998592,width-1280,height-720,resizemode-4/106998592.jpg",
+      "https://cdn.mos.cms.futurecdn.net/j4cAbsF38uqgxxV47hcn2E-1200-80.jpg",
+      "https://earthhow.com/wp-content/uploads/2018/08/Jupiter-850x850.jpg",
+      "https://images.newscientist.com/wp-content/uploads/2021/06/28094440/29-june_jupiter.jpg"
+    ]
+  },
+  {
+    "position": "6",
+    "planet": "Saturn",
+    "description": "Saturn is the sixth planet from the Sun and the most distant that can be seen with the naked eye. Saturn is the second largest planet and is best known for its fabulous ring system that was first observed in 1610 by the astronomer Galileo Galilei. Like Jupiter, Saturn is a gas giant and is composed of similar gasses including hydrogen, helium and methane.",
+    "numberImage": "assets/numbers/img6.png",
+    "planetImage": "assets/planets/saturn.png",
+    "color": "#E3C567",
+    "velocity": "9",
+    "distance": "1426",
+    "images": [
+      "http://space-facts.com/wp-content/uploads/saturn-transparent.png",
+      "https://t4.ftcdn.net/jpg/05/76/94/07/360_F_576940763_NiiuW6PnSxWYnh8wx3xebvDJTQaM9oB5.jpg",
+      "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/05/1200/675/Ring-Rocks.jpg?ve=1&tl=1",
+      "https://img.freepik.com/free-photo/solar-system-planet-collage_23-2150188972.jpg",
+      "https://www.worldatlas.com/r/w768/upload/5f/80/fc/saturn-01.png",
+      "https://earthhow.com/wp-content/uploads/2018/08/Saturn-850x850.jpg"
+    ]
+  },
+  {
+    "position": "7",
+    "planet": "Uranus",
+    "description": "Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both have bulk chemical compositions which differ from that of the larger gas giants Jupiter and Saturn. Uranus is tipped over on its side with an axial tilt of 98 degrees.",
+    "numberImage": "assets/numbers/img7.png",
+    "planetImage": "assets/planets/uranus.png",
+    "color": "#BCE3F5",
+    "velocity": "6",
+    "distance": "2871",
+    "images": [
+      "http://space-facts.com/wp-content/uploads/uranus-transparent.png",
+      "https://www.smithsonianmag.com/tile/1360x780/uranus_1360x780.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/1200px-Uranus2.jpg",
+      "https://cdn.mos.cms.futurecdn.net/wnx5Yye5FQjvJpkWq9cFfQ-1200-80.jpg",
+      "https://static.toiimg.com/thumb/msid-106944579,width-1280,height-720,resizemode-4/106944579.jpg"
+    ]
+  },
+  {
+    "position": "8",
+    "planet": "Neptune",
+    "description": "Neptune is the eighth planet from the Sun and is the farthest planet from the Sun in our solar system. Neptune is 17 times the mass of Earth and is slightly more massive than its near-twin Uranus. It is the only planet in our solar system that is not visible to the naked eye and was first observed in 1846.",
+    "numberImage": "assets/numbers/img8.png",
+    "planetImage": "assets/planets/neptune.png",
+    "color": "#3B67E3",
+    "velocity": "5",
+    "distance": "4497",
+    "images": [
+      "http://space-facts.com/wp-content/uploads/neptune-transparent.png",
+      "https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg",
+      "https://www.spacecentre.co.uk/wp-content/uploads/2023/08/neptune_img-750x675.png",
+      "https://www.nasa.gov/sites/default/files/thumbnails/image/neptune_full.jpg?itok=rNabEk2m",
+      "https://static.scientificamerican.com/sciam/cache/file/8372F74C-292A-4D98-B8DA3D183A3B2E65_source.jpg",
+      "https://www.universetoday.com/wp-content/uploads/2008/10/neptune.jpg"
+    ]
+  }
 ]

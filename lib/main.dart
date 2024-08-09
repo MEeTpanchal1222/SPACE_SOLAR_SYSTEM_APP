@@ -9,7 +9,6 @@ import 'package:space_solar_system_app/view/slash_screen/slash_screen.dart';
 void main() {
   runApp(
     MultiProvider(providers: [
-      ChangeNotifierProvider(create: (context) => JsoncardProvider(),),
       ChangeNotifierProvider(create: (context) => JsonDetailProvider(),),
 
     ],

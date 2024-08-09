@@ -20,7 +20,6 @@ class _slshscreenState extends State<slshscreen> {
       const Duration(seconds: 2),
           () {
             Provider.of<JsonDetailProvider>(context, listen: false);
-            Provider.of<JsoncardProvider>(context,listen: false);
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
             builder: (context) => HomeScreen(),

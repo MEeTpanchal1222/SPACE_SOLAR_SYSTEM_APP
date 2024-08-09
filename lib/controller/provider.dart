@@ -4,28 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../modal/detail_screen_modal/detail_modal.dart';
-import '../modal/home_card_modal/home_card_modal.dart';
-
-class JsoncardProvider extends ChangeNotifier {
-  List dataList = [];
-  List<Planetcardmodal> userList = [];
-
-  JsoncardProvider() {
-    print('--------------------- data called ----------------');
-    jsonParsing();
-    print('--------------------- Done ----------------');
-  }
-
-  Future<void> jsonParsing() async {
-    String? json = await rootBundle.loadString('assets/json/home_screen_planet_list/list.json');
-    dataList = jsonDecode(json);
-
-    userList = dataList.map((e) => Planetcardmodal.fromJson(e)).toList();
-
-    print(userList);
-    notifyListeners();
-  }
-}
 
 class JsonDetailProvider  extends ChangeNotifier {
   List dataList = [];
@@ -36,11 +14,12 @@ class JsonDetailProvider  extends ChangeNotifier {
     print('--------------------- data called ----------------');
     jsonParsing();
     _loadBookmarkedPlanets();
+    _saveBookmarkedPlanets();
     print('--------------------- Done ----------------');
   }
 
   Future<void> jsonParsing() async {
-    String? json = await rootBundle.loadString('assets/json/planet_list/planet_list.json');
+    String? json = await rootBundle.loadString('assets/json/home_screen_planet_list/list.json');
     dataList = jsonDecode(json);
 
     userList = dataList.map((e) => Planet.fromJson(e)).toList();
@@ -56,6 +35,7 @@ class JsonDetailProvider  extends ChangeNotifier {
       bookmarkedList = userList
           .where((planet) => bookmarkedPlanets.contains(planet.name))
           .toList();
+      print('done');
       notifyListeners();
     }
   }
@@ -70,8 +50,10 @@ class JsonDetailProvider  extends ChangeNotifier {
   void toggleBookmark(Planet planet) {
     if (bookmarkedList.contains(planet)) {
       bookmarkedList.remove(planet);
+      print("remove");
     } else {
       bookmarkedList.add(planet);
+      print("add");
     }
     _loadBookmarkedPlanets();
     _saveBookmarkedPlanets();

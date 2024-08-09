@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../modal/home_card_modal/home_card_modal.dart';
+import '../../../modal/detail_screen_modal/detail_modal.dart';
 import '../../../modal/home_card_modal/page_ transitions.dart';
 import '../../detail_screen/detail_screen.dart';
 
 class PlanetCard extends StatefulWidget {
-  final Planetcardmodal planetCardModal;
+  final Planet planetCardModal;
 
   PlanetCard({required this.planetCardModal});
 
@@ -67,7 +67,7 @@ class _PlanetCardState extends State<PlanetCard> with SingleTickerProviderStateM
               top: _animation.value,
               left: 60,
               child: Hero(
-                tag: widget.planetCardModal.planet,
+                tag: widget.planetCardModal.planetImage,
                 child: Image.asset(
                   widget.planetCardModal.planetImage,
                   height: 250,
@@ -112,7 +112,7 @@ class _PlanetCardState extends State<PlanetCard> with SingleTickerProviderStateM
                         Padding(
                           padding: const EdgeInsets.only(right: 150),
                           child: Text(
-                            widget.planetCardModal.planet,
+                            widget.planetCardModal.name,
                             style: TextStyle(
                               fontSize: 28,
                               color: Color(int.parse("0xFF${widget.planetCardModal.color.substring(1)}")),

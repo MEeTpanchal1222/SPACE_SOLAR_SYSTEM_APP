@@ -41,7 +41,7 @@ class _DetailscreenState extends State<Detailscreen> with SingleTickerProviderSt
   @override
   Widget build(BuildContext context) {
     JsonDetailProvider jsonDetailProvider = Provider.of<JsonDetailProvider>(context, listen: false);
-    JsoncardProvider jsonCardProvider = Provider.of<JsoncardProvider>(context, listen: false);
+
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -62,7 +62,7 @@ class _DetailscreenState extends State<Detailscreen> with SingleTickerProviderSt
                 ),
                 SizedBox(height: 200),
                 Image.asset(
-                  jsonCardProvider.userList[widget.index].numberImage,
+                  jsonDetailProvider.userList[widget.index].numberImage,
                   height: 300,
                   fit: BoxFit.cover,
                 ),
@@ -75,7 +75,7 @@ class _DetailscreenState extends State<Detailscreen> with SingleTickerProviderSt
                     ),
                     SizedBox(width: 200,),
                     IconButton(onPressed: () {
-                      jsonDetailProvider.bookmarkedList.add(jsonDetailProvider.userList[widget.index]);
+                      jsonDetailProvider.toggleBookmark(jsonDetailProvider.userList[widget.index]);
                     }, icon: Icon(Icons.book),)
                   ],
                 ),
@@ -103,14 +103,14 @@ class _DetailscreenState extends State<Detailscreen> with SingleTickerProviderSt
                   height: 200,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: jsonDetailProvider.userList[widget.index].image.length,
+                    itemCount: jsonDetailProvider.userList[widget.index].images.length,
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(30),
                           child: Image.network(
-                            jsonDetailProvider.userList[widget.index].image[index],
+                            jsonDetailProvider.userList[widget.index].images[index],
                             width: 200,
                             fit: BoxFit.cover,
                           ),
@@ -135,9 +135,9 @@ class _DetailscreenState extends State<Detailscreen> with SingleTickerProviderSt
               },
               child: Hero(
                 tag:
-                jsonCardProvider.userList[widget.index].planet,
+                jsonDetailProvider.userList[widget.index].name,
                 child: Image.asset(
-                  jsonCardProvider.userList[widget.index].planetImage,
+                  jsonDetailProvider.userList[widget.index].planetImage,
                   height: 400,
                   fit: BoxFit.cover,
                 ),
